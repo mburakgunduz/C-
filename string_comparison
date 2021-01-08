@@ -1,0 +1,44 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        public static void Main()
+        {
+            string str;
+            Console.Write("İlk cümleyi giriniz: ");
+            str = Console.ReadLine();
+            string strr;
+            Console.Write("İkinci cümleyi giriniz: ");
+            strr = Console.ReadLine();
+            string strr1;
+            
+            if(str.Length <= strr.Length) 
+            { 
+            
+                for (int i = 0; i < str.Length; i++)
+                { 
+                    if ((int)str[i] != (int)strr[i])
+                    {
+                    Console.WriteLine("Cümlelerin :{0}. sıradaki karakterleri farklıdır. ", (i+1));
+                    }
+                }
+                     strr1 = strr.Substring(str.Length);
+                     Console.WriteLine(strr1);
+            }
+            else
+            {
+                for (int i = 0; i < strr.Length; i++)
+                {
+                    if ((int)strr[i] != (int)str[i])
+                    {
+                        Console.WriteLine("Cümlelerin :{0}. sıradaki karakterleri farklıdır. ", (i + 1));
+                    }
+                }
+                strr1 = str.Substring(strr.Length);
+                Console.WriteLine(strr1);
+            }
+        }
+    }
+}
